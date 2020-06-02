@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   get '/survey', to: 'pages#survey'
   get '/complete', to: 'pages#complete'
   get 'results', to: 'pages#results'
+
+  root to: '/survey', to: 'pages#survey'
 end
