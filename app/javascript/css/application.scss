@@ -1,0 +1,24 @@
+@import '@fortawesome/fontawesome-free';
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+.btn {
+  @apply text-white font-bold py-4 px-4 rounded
+}
+
+.btn-green {
+  @apply bg-green-400
+}
+
+.btn-green:hover {
+  @apply bg-green-700
+}
+
+.btn-red {
+  @apply bg-red-500
+}
+
+.btn-red:hover {
+  @apply bg-red-700
+}

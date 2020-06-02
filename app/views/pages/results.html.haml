@@ -1,0 +1,23 @@
+.container.mx-auto
+  .flex.text-center.mt-16.mx-auto{class: 'w-1/2'}
+    %h1.text-2xl.w-full Results
+.container.mx-auto.mt-4
+  .flex.bg-white.p-4.rounded.shadow.flex-col.mx-auto{class: 'w-1/2'}
+    %table.table-auto
+      %thead
+        %tr.font-bold
+          %td.px-4.py-2 Name
+          %td.px-4.py-2 Yes 
+          %td.px-4.py-2 No 
+      %tbody
+      - @options.each_with_index do |o, i|
+        - if i.odd?
+          %tr
+            %td.border.px-4.py-2= o.name
+            %td.border.px-4.py-2= o.yes_votes_count
+            %td.border.px-4.py-2= o.no_votes_count
+        - else
+          %tr.bg-gray-100
+            %td.border.px-4.py-2= o.name
+            %td.border.px-4.py-2= o.yes_votes_count
+            %td.border.px-4.py-2= o.no_votes_count
